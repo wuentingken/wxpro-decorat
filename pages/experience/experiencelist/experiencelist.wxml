@@ -1,0 +1,14 @@
+<wxs module="filter" src='../../filter.wxs'></wxs>
+<view class="draftContainer">
+    <view class="draftList">
+        <view wx:for='{{exper}}'>
+          <view class="list-li">
+            <view class="draftBan" bindtap='toexin'><image src="{{host}}{{item.img.path}}" alt="" id='{{item.id}}'></image></view>
+            <view class="draftText">
+                <view class="dtTitle text-ellipsis">{{item.title}}</view>
+                <view class="area text-ellipsis">{{filter.canelp(item.content)}}</view>
+            </view>
+          </view>
+        </view>
+    </view>
+</view>

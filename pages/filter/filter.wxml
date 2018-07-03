@@ -1,0 +1,18 @@
+<!--pages/filter/filter.wxml-->
+<view class="filterContainer" bindtap='choiceanli'>
+        <view data-choic='现代'>现代</view>
+        <view data-choic='欧式'>欧式</view>
+        <view data-choic='北欧'>北欧</view>
+        <view data-choic='美式'>美式</view>
+        <view data-choic='日式'>日式</view>
+        <view data-choic='中式'>中式</view>
+        <view data-choic='地中海'>地中海</view>
+        <view data-choic='东南亚'>东南亚</view>
+        <view data-choic='法式'>法式</view>
+        <view data-choic='混搭'>混搭</view>
+        <view data-choic='别墅'>别墅</view>
+        <view data-choic='复试'>复试</view>
+        <view data-choic='二室户'>二室户</view>
+        <view data-choic='三室户'>三室户</view>
+        <view data-choic='四室户'>四室户</view>
+    </view>

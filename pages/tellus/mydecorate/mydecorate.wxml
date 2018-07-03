@@ -1,0 +1,68 @@
+<import src="../../../model/model.wxml"/>
+<view class="mdPrompt"><text>*填写自己的装修信息能够有效提高与设计师的沟通效率</text></view>
+<view class="mdContainer">
+    <view class="myli">
+        <view class="befortitle">房屋所在城市</view>
+        <view class="aftertitle">
+            <input class="mdinput w_300" placeholder="未选择" disabled='disabled' bindtap="translate" value='{{province}}{{city}}{{county}}'/><text class="mdunit"></text>
+        </view>
+    </view>
+    <view class="myli">
+        <view class="befortitle">户型</view>
+        <view class="aftertitle">
+            <input class="mdinput w_300" placeholder="未选择" disabled='disabled' bindtap="translate01" value='{{shi}}{{ting}}{{chu}}{{wei}}'/><text class="mdunit"></text>
+        </view>
+    </view>
+    <view class="myli">
+        <view class="befortitle">建筑面积</view>
+        <view class="aftertitle">
+            <input class="mdinput" placeholder="未填写" /><text class="mdunit">平米</text>
+        </view>
+    </view>
+    <view class="myli">
+        <view class="befortitle">房屋现状</view>
+        <view class="aftertitle">
+            <input class="mdinput" placeholder="未选择" disabled='disabled' bindtap="translate02" value='{{fang}}'/><text class="mdunit"></text>
+        </view>
+    </view>
+    <view class="myli">
+        <view class="befortitle">常住人口</view>
+        <view class="aftertitle">
+            <input class="mdinput w_300" placeholder="未选择" disabled='disabled' bindtap="translate03" value='{{cheng}}{{lao}}{{er}}'/><text class="mdunit"></text>
+        </view>
+    </view>
+    <view class="myli">
+        <view class="befortitle">装修预算</view>
+        <view class="aftertitle">
+            <input class="mdinput" placeholder="未填写" /><text class="mdunit">万元<text>(包含设计费)</text></text>
+        </view>
+    </view>
+    <view class="myli">
+        <view class="befortitle">开始装修的时间</view>
+        <picker mode="date" value="{{date}}" start="2000-00-00" end="" bindchange="bindDateChange">
+        <view class="aftertitle">
+            <input class="mdinput w_300" placeholder="未选择" disabled='disabled' value="{{date}}"/><text class="mdunit"></text>
+        </view>
+        </picker>
+    </view>
+    <view class="myli">
+        <view class="befortitle">计划入住时间</view>
+        <picker mode="date" value="{{datend}}" start="2000-00-00" end="" bindchange="bindDateChangend">
+        <view class="aftertitle">
+            <input class="mdinput w_300" placeholder="未选择" disabled='disabled' value="{{datend}}"/><text class="mdunit"></text>
+        </view>
+        </picker>
+    </view>
+    <view class="myli">
+        <view class="befortitle">备注</view>
+        <view class="aftertitle">
+            <input class="mdinput w_300" placeholder="有什么偏好？ 选填" bindfocus='tobeizhu'/><text class="mdunit"></text>
+        </view>
+    </view>
+</view>
+
+<template is="areaData" data="{{...item}}"/>
+<template is="homeData" data="{{...item}}"/>
+<template is="nowData" data="{{...item}}"/>
+<template is="peopleData" data="{{...item}}"/>
+

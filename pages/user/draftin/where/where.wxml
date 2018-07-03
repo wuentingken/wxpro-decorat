@@ -1,0 +1,9 @@
+<import src="../../../../model/model.wxml"/>
+<view>
+  <view class='huxingtitle'>房子在哪个城市？</view>
+  <view class='minajiinput' style='width:50%'>
+  <input class="mdinput w_300" placeholder="选择城市" disabled='disabled' bindtap="translate" value='{{province}}{{city}}{{county}}' style='font-size:28rpx;color:#cb3517;width:300rpx;'/>
+  <view class='icon-font icon-dingwei'></view></view>
+  <template is="areaData" data="{{...item}}"/>
+  <view class='confirmbutton' bindtap='tophoto'>确定</view>
+</view>

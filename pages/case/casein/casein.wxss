@@ -1,0 +1,2 @@
+/* pages/case/casein/casein.wxss */
+@import "../../../wxParse/wxParse.wxss";

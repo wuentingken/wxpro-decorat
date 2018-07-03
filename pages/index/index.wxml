@@ -1,0 +1,82 @@
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+<view class="indexContainer" style='margin-bottom:50px'>
+        <view class="seach">
+            <input type="text" class="seachInput" placeholder="想看什么？搜搜看" bindfocus="toSearch"/>
+            <text class="icon-font icon-search seachIcon"></text>
+        </view>
+        <view class="banner">
+            <view class="ban ban1" bindtap='todecoratelist'>
+                <image src='{{host}}static/home/img/ban1.png'></image>
+                <view class='proText'>
+                  <text class="bantitle">装修日记</text>
+                  <text>Decoration diary</text>
+                </view>
+            </view>
+            <view class="banOther">
+                <view class="ban ban2" bindtap='tocaselist'>
+                    <image src='{{host}}static/home/img/ban2.png'></image>
+                    <view class='proText'>
+                      <text class="bantitle">案例作品</text>
+                      <text>Case work</text>
+                    </view>
+                </view>
+                <view class="ban ban3" bindtap='toexperience'>
+                    <image src='{{host}}static/home/img/ban3.png'></image>
+                    <view class='proText'>
+                      <text class="bantitle">装修经验</text>
+                      <text>Decoration experience</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="banner ban ban4">
+            <image src='{{host}}static/home/img/ban4.png'></image>
+            <view class='proText'>
+              <text class="bantitle">发布区</text>
+              <text>Decoration diary</text>
+            </view>
+        </view>
+        <view class="type" bindtap='choiceanli'>
+            <view class="{{tui}}" data-choic='推荐'>推荐<view class="line"></view></view>
+            <view class="{{xian}}" data-choic='现代'>现代<view class="line"></view></view>
+            <view class="{{bei}}" data-choic='北欧'>北欧<view class="line"></view></view>
+            <view class="{{mei}}" data-choic='美式'>美式<view class="line"></view></view>
+            <view class="{{ri}}" data-choic='日式'>日式<view class="line"></view></view>
+            <view class="{{zhong}}" data-choic='中式'>中式<view class="line"></view></view>
+            <view bindtap="toFilter"><image src="../img/more.png" alt="" class="moreimg"></image></view>
+        </view>
+        <view wx:for="{{anli}}">
+          <view class="banner ban ban5" bindtap='tocasein' id='{{item.id}}'>
+              <image src='{{host}}{{item.img.path}}'></image>
+              <view class='proText'>
+                <text>案例</text>
+              </view>
+          </view>
+        </view>
+        <view class="footer">
+            <a>
+                <view><image src="../img/foot1.png" alt="" ></image>
+                <text>首页 </text></view>
+            </a>
+            <a bindtap='toUsercenter'>
+                <view><image src="../img/foot2.png" style="width: 36rpx;" alt="" ></image>
+                <text>我的</text></view>
+                
+            </a>
+            <a bindtap='topicker'>
+                <view><image src="../img/foot3.png" style="width: 38rpx;" alt="" ></image>
+                <text>联系我们</text></view>
+                
+            </a>
+            <a bindtap='showfabu' style='display:none'>
+                <image src="../img/foot4.png" alt="" ></image>
+            </a>
+        </view>
+        <view class='fabu' wx:if="{{showfabu}}" animation='{{animationfabu}}'>
+          <view class='fabuicon' bindtap='tohu'>
+            <image src='../img/fabu.png'></image>
+            <view>发布装修日记</view>
+          </view>
+          <view class='canelimg' bindtap='hidefabu'><image src='../img/canelfabu.png'></image></view>
+        </view>
+    </view>

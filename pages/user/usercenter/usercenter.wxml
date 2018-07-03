@@ -1,0 +1,44 @@
+<view class="userContainer">
+        <view class="userTop">
+            <view class="userHead"><image src="{{userimg}}" alt=""></image></view>
+            <p class="username">{{username}}</p>
+        </view>
+        <view class="userType">
+            <view bindtap="toDayBook">
+                <view><image src="../../img/ut1.png" style="width: 40rpx;" alt=""></image></view>
+                <view>我的日记</view>
+            </view>
+            <view bindtap="toDraft">
+                <view><image src="../../img/ut2.png" alt=""></image></view>
+                <view>草稿箱</view>
+            </view>
+            <view>
+                <view><image src="../../img/ut3.png" alt=""></image></view>
+                <view>评论</view>
+            </view>
+            <view bindtap="toCollect">
+                <view><image src="../../img/ut4.png" alt=""></image></view>
+                <view>收藏</view>
+            </view>
+        </view>
+        <view class="footer">
+            <a bindtap='toIndex'>
+                <view><image src="../../img/foot1.png" alt="" ></image>
+                <text>首页 </text></view>
+                
+            </a>
+            <a>
+                <view><image src="../../img/foot2.png" style="width: 36rpx;" alt="" ></image>
+                <text>我的</text></view>
+                
+            </a>
+            <a bindtap='topicker'>
+                <view><image src="../../img/foot3.png" style="width: 38rpx;" alt="" ></image>
+                <text>联系我们</text></view>
+                
+            </a>
+            <a style='display:none'>
+                <image src="../../img/foot4.png" alt="" ></image>
+            </a>
+        </view>
+    </view>

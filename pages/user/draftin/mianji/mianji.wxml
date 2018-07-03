@@ -1,0 +1,5 @@
+<view>
+  <view class='huxingtitle'>房子的使用面积是多少？</view>
+  <view class='minajiinput'><input placeholder='0.00' bindinput='mianji' value='{{mianji}}'></input><text>平米</text></view>
+  <view class='confirmbutton' bindtap='toyusuan'>确定</view>
+</view>

@@ -1,0 +1,39 @@
+<view>
+  <view class='talindex'>
+      <view class='map' bindtap="includePoints"><image src='../../img/map.png'></image></view>
+      <view class='addres'>ADD : 成都市武侯区二环路西一段6号红星美凯龙 双楠店A区2号电梯901</view>
+      <view class='teluu'>
+        <image src='../../img/talltel.png'></image>
+        <view class='ttt'>
+          <view class='nummm'>028-87445879</view>
+          <view class='nummm' bindtap='calling'>一键拨号</view>
+        </view>
+      </view>
+      <view class='teluu'>
+        <image src='../../img/wei.png'></image>
+        <view class='ttt'>
+          <view class='nummm'>hft87445879</view>
+          <view class='nummm' bindtap='capy'>一键复制</view>
+        </view>
+      </view>
+  </view>
+  <view class="footer">
+    <a bindtap='toIndex'>
+        <view><image src="../../img/foot1.png" alt="" ></image>
+        <text>首页 </text></view>
+    </a>
+    <a bindtap='toUsercenter'>
+        <view><image src="../../img/foot2.png" style="width: 36rpx;" alt="" ></image>
+        <text>我的</text></view>
+        
+    </a>
+    <a>
+        <view><image src="../../img/foot3.png" style="width: 38rpx;" alt="" ></image>
+        <text>联系我们</text></view>
+        
+    </a>
+    <a bindtap='showfabu' style='display:none'>
+        <image src="../img/foot4.png" alt="" ></image>
+    </a>
+</view>
+</view>

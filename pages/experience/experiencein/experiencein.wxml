@@ -1,0 +1,81 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="dayContainer" style="margin-bottom: 60px">
+    <view class="dayTopImg"><image src="{{host}}{{anli.c_img.path}}" alt=""></image></view>
+    <view class="dtTitle dayname">{{anli.property}}  {{anli.house_type}} {{anli.house_style}}</view>
+    <view class="dayuser d_flex">
+        <view class="dayul">
+            <view class="dulimg"><image src="../../img/ulimg.png" alt=""></image></view>
+            <view class="dayusername">{{anli.user.nickname}}</view>
+        </view>
+        <view><text class="icon-font icon-edit editDay"></text></view>
+    </view>
+    <view class="room">
+        <view>案例风格：{{anli.house_style}}</view>
+        <view>房屋面积：{{anli.area}}平米</view>
+        <view>户   型：{{anli.house_type}}</view>
+        <view>所 在 地  : {{anli.site}}</view>
+        <view>实际花费 : {{anli.spend}}万</view>
+    </view>
+    <view class="roomContext">
+        <view wx:for='{{anli.d_img}}'><image src="{{host}}{{item.path}}" alt=""></image></view>
+        <view class="roomtxt">
+            <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        </view>
+    </view>
+</view>
+<view class="pingBottom">
+    <view class="pingShow">
+        <view class="pingInput"><input type="text" placeholder="有什么想问的？ 直接评论吧" bindtap="showPing" disabled='disabled'/></view>
+        <view class="pL">
+            <view class="cicon"><image src="../../img/pinglun.png" alt=""></image></view>
+            <view class="num">{{anli.com_count}}</view>
+        </view>
+        <view class="sC" bindtap='sc'>
+            <view class="cicon"><image src="{{scimg}}" alt=""></image></view>
+            <view class="num {{colyel?'colyel':''}}">{{anli.save}}</view>
+        </view>
+        <view class="zA" bindtap='zan'>
+            <view class="cicon"><image src="{{zanimg}}" alt=""></image></view>
+            <view class="num {{colred?'colred':''}}">{{anli.like}}</view>
+        </view>
+    </view>
+    <view class="showPing" wx:if="{{showP}}">
+        <view class="blackP" bindtap='hidePing'></view>
+        <view class="PL" wx:if="{{showP}}" animation='{{animationPing}}'>
+            <view class="pTop">
+                <view class="pTitle">{{anli.com_count}}条评论</view>
+                <view class="delPL" bindtap="hidePing"><text class="icon-font icon-delete fs_18"></text></view>
+            </view>
+            <view class="allP">全部评论</view>
+            <view class="pingList">
+                <view wx:for="{{pinglun}}">
+                <view>
+                    <view class="pLin">
+                        <view class="headImg"><image src="{{item.imgurl}}" alt=""></image></view>
+                        <view class="pingText">
+                            <view class="pName">HarryLu</view>
+                            <view class="pTime">{{item.time}}</view>
+                            <view class="pText">{{item.content}}</view>
+                        </view>
+                    </view>
+                     <view class="huiFu" wx:if='{{item.reply}}'>
+                      <view class="headImg"></view>
+                      <view class="pingText">
+                          <view class="zHui">
+                              <view class="sline"></view>
+                              <view>作者回复</view>
+                          </view>
+                          <view class="pText ml_1 fs_11">{{item.reply}}</view>
+                          <view class="pTime ml_1">{{item.reply_time}}</view>
+                      </view>
+                    </view>  
+                </view>
+                </view>
+            </view>
+            <view class="srInput">
+                <input type="text" bindconfirm='confir' id='{{anli.id}}' value='{{nic}}'/>
+            </view>
+        </view>
+    </view>
+</view>
+

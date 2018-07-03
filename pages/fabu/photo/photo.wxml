@@ -1,0 +1,78 @@
+<view style='background：#efefef;'>
+  <view class='topfeng'>
+    <view class='ttf'>
+      <view bindtap='guanbi'>关闭</view>
+      <view>
+        <text bindtap='savecaogao'>保存</text>
+        <text bindtap='liulan'>浏览</text>
+        <text bindtap='fabu'>发布</text>
+      </view>
+    </view>
+    <view class='tbf'>
+      <view class='feng {{tfeng?"active":""}}' bindtap='tabfeng' id='1'>封面</view>
+      <view class='feng {{tfeng?"":"active"}}' bindtap='tabfeng' id='2'>空间</view>
+    </view>
+  </view>
+  <view class='tabfeng' wx:if='{{tfeng}}'>
+      <view class='choiceimg' bindtap='choiceimage'><image src='{{photo}}'></image></view>
+      <view class='choul'>
+        <view class='choli' bindtap='tosavetitle'>
+          <view class='choleft' wx:if='{{!title}}'>
+            <view class='chotitle'>标题</view>
+            <view class='chotext'>按提示要求填写标题</view>
+          </view>
+          <view class='choleft' wx:if='{{title}}'>
+            <view class='chotitle'>{{title}}</view>
+          </view>
+          <view class='icon-font icon-more'></view>
+        </view>
+        <view class='choli'>
+          <view class='choleft'>
+            <view class='chotitle'>说在前面</view>
+          </view>
+          <view class='icon-font icon-more'></view>
+        </view>
+      </view>
+      <view class='tiao'></view>
+      <view class='choul'>
+        <view class='choli' bindtap='tohuxing'>
+          <view class='choleft'>
+            <view class='chotitle'>户型</view>
+            <view class='chotext'>{{huxing}}</view>
+          </view>
+          <view class='icon-font icon-more'></view>
+        </view>
+        <view class='choli' bindtap='tomianji'>
+          <view class='choleft'>
+            <view class='chotitle'>使用面积</view>
+            <view class='chotext'>{{mianji}}平米</view>
+          </view>
+          <view class='icon-font icon-more'></view>
+        </view>
+        <view class='choli' bindtap='toyusuan'>
+          <view class='choleft'>
+            <view class='chotitle'>装修花费</view>
+            <view class='chotext'>{{yusuan}}万元</view>
+          </view>
+          <view class='icon-font icon-more'></view>
+        </view>
+      </view>
+  </view>
+  <view class='tabkong' wx:if='{{!tfeng}}'>
+      <view class='changan'>长按对空间排序，自定义空间可左滑删除</view>
+      <view class='kongul' bindtap='tokong'>
+        <view wx:for='{{kongjian}}' wx:key='{{index}}'>
+          <view class='kongli' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{item.txtStyle}}" data-index='{{index}}'  data-type='{{item.title}}' id='{{item.id}}'>
+            <view class='kongleft'>
+              <view class='chotitle'>{{item.title}}</view>
+              <view class='chotext'>{{kongj[item.title].length}}张</view>
+            </view>
+            <view class='addi' bindtap='choiimg'><image src='{{kongj[item.title][0].imgurl?host+kongj[item.title][0].imgurl:"../../img/addimage.png"}}' data-type='{{item.title}}'></image></view>
+            <view class="handle" style='height:138rpx;width:50px;right:-50px;border-bottom:1px solid #efefef'>
+                <view class="delDra" catchtap='delkongj' data-index='{{index}}'><image src="../../img/delicon.png" alt=""></image></view>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>

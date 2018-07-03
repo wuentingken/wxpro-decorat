@@ -1,0 +1,23 @@
+<view class='tabkong'>
+      <view class='changan'>长按对空间排序，自定义空间可左滑删除</view>
+      <view class='kongul' bindtap='tosetkong'>
+        <view wx:for='{{kong}}'>
+          <view class='kongli' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{item.txtStyle}}" data-index='{{index}}' id='{{index}}'>
+            <view class='kongleft'>
+              <view class='chotitle'>{{item.imgtext}}</view>
+            </view>
+            <view class='addi' bindtap='choiimg'><image src='{{host}}{{item.imgurl}}'></image></view>
+            <view class="handle" style='height:138rpx;width:50px;right:-50px;border-bottom:1px solid #efefef'>
+                <view class="delDra" catchtap='delkong' data-index='{{index}}'><image src="../../img/delicon.png" alt=""></image></view>
+            </view>
+          </view>
+        </view>
+        <view class='kongli' id='{{num}}'>
+          <view class='kongleft'></view>
+          <view class='addi' bindtap='choiimg'><image src='../../img/addimage.png'></image></view>
+          <view class="handle" style='height:138rpx;width:50px;right:-50px;border-bottom:1px solid #efefef'>
+              <view class="delDra"><image src="../../img/delicon.png" alt=""></image></view>
+          </view>
+        </view>
+      </view>
+  </view>

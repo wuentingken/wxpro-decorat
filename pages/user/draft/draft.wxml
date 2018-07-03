@@ -1,0 +1,19 @@
+<view class="draftContainer">
+    <view class="prompt" wx:if='{{show}}'>
+        <view class="lefth">左滑可编辑草稿</view>
+        <view bindtap='delthis'><span class="icon-font icon-delete draftDelate"></span></view>
+    </view>
+    <view class="draftList" wx:for='{{caogaolist}}'>
+        <view class="list-li" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{item.txtstyle}}" data-index='{{index}}'>
+            <view class="draftBan"><image src="{{host}}{{item.cover_img}}" alt=""></image></view>
+            <view class="draftText">
+                <view class="dtTitle">{{item.title}}</view>
+                <view class="area">{{item.area}}平米</view>
+            </view>
+            <view class="handle">
+                <view><image src="../../img/editicon.png" alt="" catchtap='todraftin' id='{{item.id}}'></image></view>
+                <view class="delDra" bindtap='delcao'><image src="../../img/delicon.png" alt="" data-index='{{index}}'></image></view>
+            </view>
+        </view>
+    </view>
+</view>

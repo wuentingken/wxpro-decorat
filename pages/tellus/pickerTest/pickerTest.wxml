@@ -1,0 +1,33 @@
+<import src="../../../model/model.wxml"/>
+<view class="infoText">{{province}} {{city}} {{county}}</view>
+<button class="animation-button" bindtap="translate">选择城市</button>
+<template is="areaData" data="{{...item}}"/>
+<picker value="{{index}}" range="{{array}}">
+    <view class="picker">   
+          当前选择：{{array[index]}}
+    </view>
+</picker>
+
+<view class="animation-element" catchtap="nono" style="display:none">
+        <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="" catchtap="nono">
+        <!--省-->
+        <picker-view-column>
+           <view wx:for="{{pro}}" wx:for-item="sheng" wx:key="">
+             {{sheng}}
+          </view>
+        </picker-view-column>
+        <!--地级市-->
+        <picker-view-column>
+          <view wx:for="{{cit}}" wx:for-item="shi" wx:key="">
+            {{shi}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+
+    <view class="classname" bindtap="translate">123</view>
+

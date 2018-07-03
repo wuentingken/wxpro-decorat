@@ -1,0 +1,2 @@
+/* pages/decorate/decoratein/decoratein.wxss */
+@import "../../../wxParse/wxParse.wxss";

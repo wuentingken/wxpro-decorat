@@ -1,0 +1,34 @@
+<view class="seacherContainer">
+        <view class="seachTop">
+            <view class="seachLeft">
+                <input type="text" class="inputSL" bindconfirm='gosear' value='{{nic}}' style='height:auto'/>
+                <text class="icon-font icon-search seachIcon"></text>
+            </view>
+            <view class="canel">取消</view>
+        </view>
+        <view class="typeTitle">大家都在搜</view>
+        <view class="filterContainer" style="margin: 10px auto;" bindtap='tosear'>
+            <view data-type='现代'>现代</view>
+            <view data-type='欧式'>欧式</view>
+            <view data-type='北欧'>北欧</view>
+            <view data-type='美式'>美式</view>
+            <view data-type='日式'>日式</view>
+            <view data-type='中式'>中式</view>
+            <view data-type='地中海'>地中海</view>
+            <view data-type='东南亚'>东南亚</view>
+            <view data-type='法式'>法式</view>
+            <view data-type='混搭'>混搭</view>
+            <view data-type='别墅'>别墅</view>
+            <view data-type='复试'>复试</view>
+            <view data-type='二室户'>二室户</view>
+            <view data-type='三室户'>三室户</view>
+            <view data-type='四室户'>四室户</view>
+        </view>
+        <view class="typeTitle" style="margin-top: 30px;">搜索历史</view>
+        <view class="history">
+            <view wx:for='{{history}}'>
+                <view bindtap='tosearchin' data-content='{{item.content}}'><text class="icon-font icon-history hisicon"></text>{{item.content}}</view>
+                <view bindtap='delhis' id='{{item.id}}'><text class="icon-font icon-delete"></text></view>
+            </view>
+        </view>
+    </view>

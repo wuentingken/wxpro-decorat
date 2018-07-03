@@ -1,0 +1,30 @@
+<view>
+  <view class='huxingtitle'>房子的户型是？</view>
+  <view class='hushuo'>不包含客厅、餐厅、厨房和洗手间</view>
+  <view class='hunum' bindtap='tominaji'>
+    <view class='disnum' id='1'>
+      <view>一室</view>
+      <view class='icon-font icon-more'></view>
+    </view>
+    <view class='disnum' id='2'>
+      <view>两室</view>
+      <view class='icon-font icon-more'></view>
+    </view>
+    <view class='disnum' id='3'>
+      <view>三室</view>
+      <view class='icon-font icon-more'></view>
+    </view>
+    <view class='disnum' id='4'>
+      <view>四室</view>
+      <view class='icon-font icon-more'></view>
+    </view>
+    <view class='disnum' id='5'>
+      <view>五室</view>
+      <view class='icon-font icon-more'></view>
+    </view>
+    <view class='disnum' id='6'>
+      <view>五室以上</view>
+      <view class='icon-font icon-more'></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view>
+  <textarea placeholder='请输入文字' bindinput='saveimgtext' value='{{imgtext}}'></textarea>
+  <view class='upimg'>
+    <view class='upicc'>
+      <image class='upiii' src='{{upiii}}'></image>
+      <view class='resetimgc' bindtap='upimg'><text class='icon-font icon-bianxie'></text></view>
+    </view>
+    
+  </view>
+</view>

@@ -1,0 +1,120 @@
+<!--model.wxml-->
+<template name="msgItem">
+  <view class = 'centerText'>
+    <text> {{index}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+
+<!-- --------------分割线------------- -->
+
+<template name="areaData">
+  <view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+        <!--省-->
+        <picker-view-column>
+           <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+             {{sheng.name}}
+          </view>
+        </picker-view-column>
+        <!--地级市-->
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:for-item="shi" wx:key="">
+            {{shi.name}}
+          </view>
+        </picker-view-column>
+        <!--区县-->
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:for-item="xian" wx:key="">
+            {{xian.name}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>
+</template>
+
+
+<template name="homeData">
+  <view class="animation-element-wrapper" animation="{{animation01}}" style="visibility:{{show01 ? 'visible':'hidden'}}" bindtap="hiddenFloatView01" data-id="445">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView01" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView01" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange01" catchtap="nono">
+        <picker-view-column>
+           <view wx:for="{{shi}}" wx:for-item="s" wx:key="">
+             {{s}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{ting}}" wx:for-item="t" wx:key="">
+            {{t}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{chu}}" wx:for-item="c" wx:key="">
+            {{c}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{wei}}" wx:for-item="w" wx:key="">
+            {{w}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>
+</template>
+
+<template name="nowData">
+  <view class="animation-element-wrapper" animation="{{animation02}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView02" data-id="446">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView02" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView02" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange02" catchtap="nono">
+        <picker-view-column>
+           <view wx:for="{{fang}}" wx:for-item="f" wx:key="">
+             {{f}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>
+</template>
+
+<template name="peopleData">
+  <view class="animation-element-wrapper" animation="{{animation03}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView03" data-id="447">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView03" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView03" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange03" catchtap="nono">
+          <picker-view-column>
+            <view wx:for="{{cheng}}" wx:for-item="c" wx:key="">
+              {{c}}
+            </view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{lao}}" wx:for-item="l" wx:key="">
+              {{l}}
+            </view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{er}}" wx:for-item="e" wx:key="">
+              {{e}}
+            </view>
+          </picker-view-column>
+        </picker-view>
+    </view>
+  </view>
+</template>

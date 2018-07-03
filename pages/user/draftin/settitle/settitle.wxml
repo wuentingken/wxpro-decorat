@@ -1,0 +1,7 @@
+<view>
+  <view class="prompt">
+      <view class="lefth">例如:万达锦华城 | 3室2厅2卫 北欧 120平米</view>
+      <view><span class="icon-font icon-delete draftDelate"></span></view>
+  </view>
+  <textarea bindinput='savetitle'></textarea>
+</view>

@@ -1,0 +1,6 @@
+<view class='beicontainer'>
+  <view class='beizhu'>
+    <textarea></textarea>
+  </view>
+  <view><text>32/100</text></view>
+</view>

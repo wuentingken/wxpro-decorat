@@ -1,0 +1,40 @@
+<view class="seacherContainer">
+        <view class="seachTop" style='border:none;padding-bottom:0'>
+            <view class="seachLeft">
+                <input type="text" class="inputSL" bindconfirm='search'/>
+                <text class="icon-font icon-search seachIcon"></text>
+            </view>
+            <view class="canel">取消</view>
+        </view>
+        <view class="banner ban ban4">
+            <image src='{{host}}static/home/img/ban4.png'></image>
+            <view class='proText'>
+              <text class="bantitle">发布区</text>
+              <text>Decoration diary</text>
+            </view>
+        </view>
+        <view class="filterContainer" style="margin: 10px auto;" bindtap='choicsty'>
+            <view id='现代'>现代</view>
+            <view id='欧式'>欧式</view>
+            <view id='北欧'>北欧</view>
+            <view id='美式'>美式</view>
+            <view id='日式'>日式</view>
+            <view id='中式'>中式</view>
+            <view id='地中海'>地中海</view>
+            <view id='东南亚'>东南亚</view>
+            <view id='法式'>法式</view>
+            <view id='混搭'>混搭</view>
+            <view id='别墅'>别墅</view>
+            <view id='复试'>复试</view>
+            <view id='二室户'>二室户</view>
+            <view id='三室户'>三室户</view>
+            <view id='四室户'>四室户</view>
+        </view>
+        <view class="typeTitle" style="margin-top: 30px;">装修日记</view>
+        <view class="decolist">
+          <view class='notext' wx:if='{{showtext}}'>暂无内容</view>
+          <view wx:for='{{decorlist}}'>
+            <view bindtap='decoratein' data-id='{{item.id}}' data-openid='{{item.openid}}'>{{item.title}}</view>
+          </view>
+        </view>
+    </view>

@@ -1,0 +1,6 @@
+<view>
+  <view class='huxingtitle'>装修预算多少钱 ？</view>
+  <view class='hushuo'>包括硬装，软装，家电</view>
+  <view class='minajiinput'><input placeholder='0.00' bindinput='yusuan' value='{{yusuan}}'></input><text>万元</text></view>
+  <view class='confirmbutton' bindtap='toarea'>确定</view>
+</view>

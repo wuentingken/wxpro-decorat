@@ -1,0 +1,14 @@
+<view class="draftContainer">
+    <view class="draftList">
+        <view class="list-li" wx:for='{{decorlist}}'>
+            <view class="draftBan" bindtap="toDayBookIn" id='{{item.id}}'><image src="{{item.cover_img}}" alt=""></image></view>
+            <view class="draftText d_flex">
+                <view>
+                    <view class="dtTitle">{{item.title}}</view>
+                    <view class="area">{{item.area}}平米</view>
+                </view>
+                <view><text class="icon-font icon-edit editDay"></text></view>
+            </view>
+        </view>
+    </view>
+</view>

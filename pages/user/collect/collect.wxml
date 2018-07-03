@@ -1,0 +1,13 @@
+<view class="draftContainer">
+    <view class="draftList">
+        <view class="list-li" wx:for='{{colllist}}'>
+          <view wx:if='{{item.ex_id&&item.ex_id&&item.diary_id}}'>
+            <view class="draftBan" bindtap='tocoll' data-ex='{{item.ex_id}}' data-diary='{{item.diary_id}}' data-cases='{{item.cases_id}}'><image src="{{item.cover_img}}" alt=""></image></view>
+            <view class="draftText">
+                <view class="dtTitle">{{item.title}}</view>
+                <view class="area text-ellipsis">{{item.content}}</view>
+            </view>
+            </view>
+        </view>
+    </view>
+</view>

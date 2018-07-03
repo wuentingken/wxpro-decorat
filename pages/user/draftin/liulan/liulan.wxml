@@ -1,0 +1,36 @@
+<view class="dayContainer" style="margin-bottom: 60px">
+    <view class="dayTopImg"><image src="{{fileimg}}" alt=""></image></view>
+    <view class="dtTitle dayname">{{title}}</view>
+    <view class="dayuser d_flex">
+        <view class="dayul">
+            <view class="dulimg"><image src="{{userimg}}" alt=""></image></view>
+            <view class="dayusername">{{username}}</view>
+        </view>
+        <view><text class="icon-font icon-edit editDay"></text></view>
+    </view>
+    <view class="room">
+        <view>案例风格：</view>
+        <view>房屋面积：{{mianji}}</view>
+        <view>户   型：{{huxing}}</view>
+        <view>所 在 地  : {{chengshi}}</view>
+        <view>实际花费 : {{yusuan}}</view>
+    </view>
+
+    
+       <view wx:for='{{kongj}}'>
+        <view wx:if='{{item.tz.length>0}}'>
+         <view class="kait">{{item.ty}}</view>
+          <view wx:for='{{item.tz}}' wx:for-index="idx" wx:for-item="itemName">
+            <view class="roomContext">
+              <view><image src="{{itemName.imgurl}}" alt=""></image></view>
+              <view class="roomtxt">
+                  {{itemName.imgtext}}
+              </view>
+            </view>
+          </view> 
+        </view>
+      </view> 
+      
+   
+    
+</view>

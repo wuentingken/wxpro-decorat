@@ -1,0 +1,6 @@
+function canelp(val){
+  return val.replace('<p>', "").replace('</p>', "").replace('<p>', "").replace('</p>', "").replace('<p>', "").replace('</p>', "").replace('<p>', "").replace('</p>', "").replace('<i>', "").replace('</i>', "");
+}
+module.exports = {
+  canelp:canelp
+}

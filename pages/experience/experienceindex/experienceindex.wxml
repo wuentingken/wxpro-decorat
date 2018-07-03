@@ -1,0 +1,132 @@
+<view class='experienceContainer'>
+  <view class='extitle'>装修前期 <text class='icon-font icon-down'></text></view>
+  <view class='exul' bindtap='toexlist'>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex01.png' data-type='前期准备'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='前期准备'>前期准备</text>
+        <text class='extexteng' data-type='前期准备'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex02.png' data-type='材料'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='材料'>材料</text>
+        <text class='extexteng' data-type='材料'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex03.png' data-type='配色'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='配色'>配色</text>
+        <text class='extexteng' data-type='配色'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex04.png' data-type='动线布局'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='动线布局'>动线布局</text>
+        <text class='extexteng' data-type='动线布局'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex05.png' data-type='预算'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='预算'>预算</text>
+        <text class='extexteng' data-type='预算'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex06.png' data-type='环保'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='环保'>环保</text>
+        <text class='extexteng' data-type='环保'>PREPARATION</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='extitle'>装修中期 <text class='icon-font icon-down'></text></view>
+  <view class='exul' bindtap='toexlist'>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex07.png' data-type='墙顶地'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='墙顶地'>墙顶地</text>
+        <text class='extexteng' data-type='墙顶地'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex08.png' data-type='厨房'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='厨房'>厨房</text>
+        <text class='extexteng' data-type='厨房'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex09.png' data-type='卫生间'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='卫生间'>卫生间</text>
+        <text class='extexteng' data-type='卫生间'>PREPARATION</text>
+      </view>
+    </view> 
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex10.png' data-type='定制安装'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='定制安装'>定制安装</text>
+        <text class='extexteng' data-type='定制安装'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex11.png' data-type='门窗'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='门窗'>门窗</text>
+        <text class='extexteng' data-type='门窗'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex12.png' data-type='水电'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='水电'>水电</text>
+        <text class='extexteng' data-type='水电'>PREPARATION</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='extitle'>装修后期 <text class='icon-font icon-down'></text></view>
+  <view class='exul' bindtap='toexlist'>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex13.png' data-type='家具'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='家具'>家具</text>
+        <text class='extexteng' data-type='家具'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex14.png' data-type='灯具'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='灯具'>灯具</text>
+        <text class='extexteng' data-type='灯具'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex15.png' data-type='电器'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='电器'>电器</text>
+        <text class='extexteng' data-type='电器'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex16.png' data-type='窗帘'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='窗帘'>窗帘</text>
+        <text class='extexteng' data-type='窗帘'>PREPARATION</text>
+      </view>
+    </view>
+    <view class='exli'>
+      <image src='{{host}}static/home/img/ex17.png' data-type='床垫'></image>
+      <view class='extext'>
+        <text class='extextchina' data-type='床垫'>床垫</text>
+        <text class='extexteng' data-type='床垫'>PREPARATION</text>
+      </view>
+    </view>
+  </view>
+</view> 

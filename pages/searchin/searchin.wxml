@@ -1,0 +1,13 @@
+<wxs module="filter" src='../filter.wxs'></wxs>
+<view class="draftContainer">
+    <view class='notext' wx:if='{{showtext}}'>暂无内容</view>
+    <view class="draftList">
+        <view class="list-li" wx:for='{{colllist}}'>
+            <view class="draftBan" bindtap='tocoll' data-ex='{{item.ex_id}}' data-diary='{{item.diary_id}}' data-cases='{{item.cases_id}}'><image src="{{host}}{{item.img.path}}" alt=""></image></view>
+            <view class="draftText">
+                <view class="dtTitle">{{item.title}}{{item.property}}</view>
+                <view class="area text-ellipsis">{{item.house_type}} {{item.area}}平米</view>
+            </view>
+        </view>
+    </view>
+</view>
