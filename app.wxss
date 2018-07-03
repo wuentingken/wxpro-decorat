@@ -1,0 +1,962 @@
+.wxParse-p image{
+  width: 100%!important;
+}
+body,ul,li,p{
+    margin: 0;
+    padding: 0;
+    font-size: 26rpx;
+    font-family: 微软雅黑;
+}
+ul,li{
+    list-style-type: none;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 683265 */
+  src: url('//at.alicdn.com/t/font_683265_zd84titaubr.eot');
+  src: url('//at.alicdn.com/t/font_683265_zd84titaubr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_683265_zd84titaubr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_683265_zd84titaubr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_683265_zd84titaubr.svg#iconfont') format('svg');
+}
+.icon-font{
+    font-family: 'iconfont'!important;
+    font-size: 32rpx;
+    font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-bianxie::before{content:'\e748'}
+.icon-search::before{content:'\e619'}
+.icon-history::before{content:'\e603'}
+.icon-delete::before{content:'\e68c'}
+.icon-more::before{content:'\e620'}
+.icon-delete::before{content:'\e68c'}
+.icon-edit::before{content:'\e6af'}
+.icon-down::before{content:'\e662'}
+.icon-dingwei::before{content:'\e607'}
+
+/*首页*/
+.seach{
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
+}
+.seachInput{
+    flex: 1;
+    border: 1px solid #999;
+    padding: 10rpx 10rpx 10rpx 60rpx;
+    border-radius: 5px;
+    font-size: 26rpx
+}
+.seachIcon{
+    position: absolute;
+    left: 28rpx;
+    top: 20rpx;
+}
+.banner{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+}
+.banner>view{
+    width: 48%;
+}
+.bantitle{
+    font-size: 27rpx!important;
+    font-weight: 600;
+    padding-top: 25rpx;
+}
+.banner text{
+    display: block;
+    font-size: 22rpx;
+    color: #000;
+    margin-left: 30rpx;
+}
+.ban1{
+    border-radius: 4px;
+    height: 400rpx;
+}
+.banner image{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.ban{
+    position: relative;
+}
+.proText{
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.ban2{
+    border-radius: 4px;
+    height: 190rpx;
+}
+.ban3{
+    border-radius: 4px;
+    height: 190rpx;
+    margin-top: 20rpx;
+}
+.ban4{
+    display: block;
+    border-radius: 4px;
+    height: 100rpx;
+}
+.type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 15px auto;
+}
+.type view{
+    font-size: 23rpx;
+    color: #000;
+    position: relative;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.type view.active{
+    font-size: 36rpx;
+}
+.moreimg{
+    width: 40rpx;
+    height: 40rpx
+}
+.line{
+    visibility: hidden;
+    width: 46rpx;
+    height: 8rpx;
+    background: #000;
+    position: absolute!important;
+    left: 14rpx;
+    bottom: -12rpx;
+}
+.active .line{
+  visibility: visible
+}
+.ban5{
+    border-radius: 4px;
+    height: 374rpx;
+    width: 90%;
+    margin: 25px auto;
+}
+.ban5 view{
+    padding: 15rpx 10rpx;
+
+}
+.ban5 view text{
+    display: inline-block;
+    background: #fff;
+    padding: 4rpx 16rpx;
+    font-size: 24rpx;
+    border-radius: 4px;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 80%;
+    left: 5%;
+    height: 60rpx;
+    padding: 20rpx 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer a{
+    text-align: center;
+}
+.footer text{
+  display: block;
+    font-size: 20rpx;
+}
+.footer a view image{
+    width: 35rpx;
+    height: 35rpx
+}
+.footer a image{
+    width: 70rpx;
+    height: 70rpx;
+}
+.fabu{
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9933), to(#c52817));
+}
+.fabuicon{
+  text-align: center;
+  margin-top: 500rpx;
+}
+.fabuicon image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.fabuicon view{
+  color: #fff;
+  font-size: 22rpx;
+}
+.canelimg{
+  text-align: center;
+  margin-top: 400rpx;
+}
+.canelimg image{
+  width: 70rpx;
+  height: 70rpx
+}
+/*筛选*/
+.filterContainer{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filterContainer view{
+    width: 130rpx;
+    height:50rpx;
+    background: #f5f5f5;
+    text-align: center;
+    line-height: 50rpx; 
+    margin-top: 10rpx;
+    border-radius: 4px;
+    font-size: 22rpx;
+}
+
+/*搜索页面*/
+.seachTop{
+    padding: 12px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #efefef;
+}
+.seachLeft{
+    width: 85%;
+    position: relative;
+    display: flex;
+}
+.inputSL{
+    background: #f5f5f5;
+    flex: 1;
+    border: none;
+    padding: 10rpx 10rpx 10rpx 60rpx;
+    border-radius: 4px;
+}
+.canel{
+  font-size: 28rpx;
+}
+.typeTitle{
+    width: 90%;
+    margin: 15px auto 10px auto;
+    color: #000;
+    font-size:29rpx;
+    font-weight: 600
+}
+.history{
+    width: 90%;
+    margin:10px auto;
+}
+.icon-history,.icon-delete{
+  font-size: 28rpx
+}
+.history>view{
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    font-size: 27rpx;
+    border-bottom: 1px solid #efefef;
+}
+.hisicon{
+    margin-right: 10rpx;
+}
+
+/*个人信息*/
+.userTop{
+    padding: 30px;
+    border-bottom: 2px solid #efefef;
+    text-align: center;
+}
+.userHead{
+    width: 160rpx;
+    margin: 10px auto;
+}
+.userHead image{
+  width: 100%;
+  height:160rpx;
+  border-radius: 50%;
+}
+.username{
+    font-size: 30rpx;
+}
+.userType{
+    padding: 30px 40rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.userType>view{
+    width: 120rpx;
+    text-align: center;
+    font-size: 22rpx;
+}
+.userType image{
+    width: 44rpx;
+    height: 44rpx;
+    margin-bottom: 8rpx;
+}
+.share{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #efefef;
+    border-bottom: 2px solid #efefef;
+    padding: 10px;
+    margin-top: 200rpx;
+    color: #666;
+}
+.sharetext{
+    width: 95%;
+    text-align: center;
+    font-size: 24rpx;
+}
+.shareicon{
+    font-size: 24rpx;
+}
+
+/*草稿箱*/
+.draftList{
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.draftList>view{
+    transform: translateX(0px);
+    position: relative;
+    margin-bottom: 50rpx;
+}
+.draftBan{
+    height: 375rpx;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+}
+.draftBan text{
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  font-size: 24rpx;
+  background: #fff;
+  padding: 4rpx 15rpx;
+  border-radius: 4px;
+}
+.draftBan image{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.draftText{
+    padding: 20rpx;
+    border: 1px solid #efefef;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.dtTitle{
+    font-size: 26rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+}
+.area{
+    font-size: 22rpx;
+    color: #999;
+    font-weight: 600;
+}
+.prompt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%;
+    background: #e97d1a;
+    color: #fff;
+}
+.lefth{
+    font-size: 24rpx;
+}
+.prompt .icon-font{
+    font-size: 36rpx;
+    cursor: pointer;
+}
+.handle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 100px;
+    height:400rpx;
+
+}
+.handle view{
+    width: 30px;
+    border-radius: 50%;
+}
+.handle view image{
+  width: 30px;
+  height: 30px
+}
+.useLeft{
+    position: absolute;
+    width: 100%;
+    height: 400rpx;
+    top: 0;
+    left: 0;
+}
+.text-ellipsis{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/*我的日记*/
+.d_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notext{
+  margin: 30rpx;
+  text-align: center
+}
+.editDay{
+    font-size: 38rpx;
+    color: #cc6600;
+    display: none;
+}
+
+/*日记内页面*/
+.dayTopImg{
+    width: 100%;
+    height: 416rpx;
+}
+.dayTopImg image{
+    width: 100%;
+    height:100%;
+}
+.dayname{
+    margin: 20rpx;
+}
+.dayuser{
+    width: 90%;
+    margin: 30px auto 10px auto;
+}
+.dulimg image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%
+}
+.dayul{
+    display: flex;
+    align-items: center;
+}
+.dayusername{
+    font-size: 26rpx;
+    margin-left: 20rpx;
+    margin-top: -10rpx
+}
+.room{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx 5%;
+}
+.room view{
+    width: 210rpx;
+    font-size: 22rpx;
+    color: #999;
+    margin: 6rpx;
+}
+.kait{
+    margin: 30rpx 5%;
+    padding: 4rpx 20rpx;
+    background: #EDEDED;
+    display: inline-block;
+    font-size: 22rpx;
+    border-radius: 4px;
+}
+.roomContext{
+    width: 90%;
+    margin: 0 auto;
+}
+.roomContext image{
+  width: 100%;
+}
+.roomtxt{
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}
+.pingShow{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 90%;
+    background: #fff;
+    border-top: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+}
+.pingInput input{
+    height: 33px;
+    border: none;
+    width:400rpx;
+    background: #f5f5f5;
+    padding-left: 14rpx;
+    border-radius: 4px;
+}
+.pingShow view{
+    color: #bbb;
+    font-size: 22rpx;
+}
+.cicon image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-bottom: -4rpx;
+}
+.blackP{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+.PL{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.pTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 5%;
+    border-bottom: 2px solid #efefef;
+}
+.pTitle{
+    width: 95%;
+    text-align: center;
+    font-size: 24rpx;
+}
+.fs_18{
+    font-size: 36rpx;
+}
+.allP{
+    font-size:30rpx;
+    font-weight: 600;
+    padding: 30rpx 0 14rpx 5%;
+    border-bottom: 1px solid #f7f7f7;
+}
+.pingList{
+    height: 700rpx;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+.pingList>view{
+    padding: 20rpx 5%;
+    border-bottom: 1px solid #f7f7f7;
+}
+.pLin{
+    display: flex;
+}
+.headImg{
+    width: 50rpx;
+    margin-right: 20rpx;
+}
+.headImg image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.pTime{
+    font-size: 20rpx;
+    color: #bbb;
+    margin-bottom: 8rpx;
+}
+.pName,.pText{
+    font-size: 24rpx;
+}
+.pText{
+    font-weight: 600;
+}
+.pingText{
+    width: 500rpx;
+}
+.huiFu{
+    display: flex;
+    border-top: 2px solid #efefef;
+    margin-top: 10rpx;
+    padding-top: 6rpx;
+}
+.zHui{
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    color: #999;
+}
+.sline{
+    width: 4px;
+    height: 20rpx;
+    margin-right: 10rpx;
+    background: #00be00;
+}
+.ml_1{
+    margin-left: 18rpx;
+    margin-top: 6rpx;
+}
+.fs_11{
+    font-size: 22rpx;
+}
+.srInput{
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background: #fff;
+}
+.srInput input{
+    height: 33px;
+    border: none;
+    width:100%;
+    background: #f5f5f5;
+    padding-left: 14rpx;
+    border-radius: 4px;
+}
+.decolist{
+    width: 90%;
+    margin: 20rpx auto;
+
+}
+.decolist view{
+    height: 65rpx;
+    line-height: 65rpx;
+    background: #f5f5f5;
+    font-size: 25rpx;
+    margin-bottom: 20rpx;
+    padding-left: 10rpx;
+    color: #444;
+}
+.content{padding-bottom: 20rpx; box-sizing: border-box; height: 100%;}
+.decorltx{
+    position: absolute;
+    top: 35rpx;
+    left: 35rpx;
+}
+.decorltx image{
+  width: 65rpx;
+  height: 65rpx;
+}
+page{ height: 100%;} 
+.leftchange{
+  min-height:500rpx;
+  padding: 20rpx 0;
+  width: 230rpx;
+  position: fixed;
+  top: 160rpx;
+  left:0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #fff;
+  font-size: 28rpx;
+}
+.leftchange .lec{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 30rpx;
+
+}
+
+/* 装修经验首页 */
+.extitle{
+  margin-left: 5%;
+  font-size: 28rpx;
+  background: #e97d1a;
+  padding: 5rpx 0rpx 5rpx 17rpx;
+  width:170rpx;
+  color: #fff;
+  border-radius: 4px
+}
+.exul{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 30rpx auto;
+}
+.exul>view{
+  width: 30.5%;
+  height: 280rpx;
+  position: relative;
+  border-radius: 4px;
+  margin-right: 3.5%;
+  margin-bottom:25rpx;
+}
+.exul>view:nth-child(3n){
+  margin-right: 0
+}
+.exul>view image{
+  width: 100%;
+  height: 100%
+}
+.extext{
+  position: absolute;
+  left: 18rpx;
+  top: 11rpx;
+  font-size: 27rpx;
+}
+.extexteng{
+  font-size:14rpx;
+  display: block
+}
+
+/* 户型 */
+.huxingtitle{
+  margin-top: 200rpx;
+  text-align: center;
+  font-size: 48rpx;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hushuo{
+  font-size: 26rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.hunum{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.disnum{
+  padding: 0 6rpx;
+  font-size: 28rpx;
+  color: #777;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+/* 面积 */
+.minajiinput{
+  width: 30%;
+  margin: 150rpx auto;
+  position: relative;
+  border-bottom: 1px solid #efefef;
+  padding: 20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: centerl
+}
+.minajiinput input{
+  width: 140rpx;
+}
+.confirmbutton{
+  width: 90%;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #fff;
+  background: #cb3517;
+  position: fixed;
+  left: 5%;
+  bottom: 50rpx;
+  font-size:28rpx;
+  text-align: center;
+  border-radius: 4px; 
+}
+.icon-dingwei{
+  font-size: 32rpx;
+  position: absolute;
+  top: 32rpx;
+  right:20rpx;
+  color: #999;
+}
+.topfeng{
+  background:-webkit-linear-gradient(left,#c72c16,#f08f1a);
+  color: #fff;
+  padding: 10rpx 5%;
+}
+.ttf{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+}
+.ttf view text{
+  margin: 0 10rpx;
+}
+.tbf{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60rpx;
+}
+.feng{
+  font-size: 26rpx;
+  padding: 15rpx 0; 
+  border-bottom: 6rpx;
+}
+.feng.active{
+  border-bottom: 6rpx solid #fff;
+}
+.choiceimg image{
+  width: 100%;
+  height: 370rpx;
+}
+.choul{
+  background: #fff;
+  padding: 0 5%;
+}
+.choli{
+  height: 120rpx;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chotitle{
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.chotext{
+  font-size: 20rpx;
+  color: #999
+}
+.tiao{
+  height: 30rpx;
+  background: #efefef
+}
+
+.changan{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  border-bottom: 1px dashed #efefef; 
+  font-size: 28rpx;
+  color: #999;
+}
+.kongli{
+  position: relative;
+  padding: 20rpx 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+}
+.addi image{
+  width: 88rpx;
+  height: 88rpx;
+}
+.map{
+  width: 80%;
+  margin: 70rpx auto 0 auto;
+}
+.map image{
+   width: 100%;
+   height: 380rpx;
+}
+.addres{
+  color: #cc6600;
+  font-size:  30rpx;
+  text-align: center;
+  width: 80%;
+  margin: 20rpx auto;
+}
+.teluu{
+  position: relative;
+  margin-top: 100rpx;
+  width: 80%;
+  height: 77rpx;
+  margin:80rpx auto;
+}
+.teluu  image{
+  width: 100%;
+  height: 77rpx;
+}
+.ttt{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 460rpx;
+  height: 77rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx 0 120rpx;
+  font-size: 26rpx;
+}
+.nummm{
+  color: #cc6600;
+  line-height: 77rpx;
+}
+.num{
+  text-align: center
+}
+.colyel{
+  color: #fc0!important;
+}
+.colred{
+  color: #c06!important;
+}
+.upimg{
+  padding: 30rpx;
+  border-top:1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+.upicc{
+  width: 150rpx;
+  height: 150rpx;
+  position: relative
+}
+.upiii{
+  width: 150rpx;
+  height: 150rpx;
+
+}
+.resetimgc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150rpx;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+}
